@@ -26,7 +26,7 @@ def part_2(passwords: Sequence[Password]) -> int:
 
 
 def preprocess_input(input_: str) -> Tuple[Password, ...]:
-    pattern = compile(r"(\d*)\-(\d*) (\w): (\w*)?")
+    pattern = compile(r"^(\d*)\-(\d*) (\w): (\w*)$")
     return tuple(
         Password(int(match[1]), int(match[2]), match[3], match[4])
         for line in input_.splitlines()
