@@ -12,7 +12,8 @@ def preprocess_input(input_: str) -> List[int]:
 
 
 def test_solution():
-    inputs = preprocess_input("1721\n979\n366\n299\n675\n1456\n")
+    with open("inputs/day_01.example.txt") as f:
+        inputs = preprocess_input(f.read())
     assert solution(inputs, n=2) == 514579
     assert solution(inputs, n=3) == 241861950
 

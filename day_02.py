@@ -35,7 +35,8 @@ def preprocess_input(input_: str) -> Tuple[Password, ...]:
 
 
 def test_solution():
-    passwords = preprocess_input("1-3 a: abcde\n1-3 b: cdefg\n2-9 c: ccccccccc")
+    with open("inputs/day_02.example.txt") as f:
+        passwords = preprocess_input(f.read())
     assert part_1(passwords) == 2
     assert part_2(passwords) == 1
 
